@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var Product_1 = require("./Product");
+var ProductService_1 = require("./ProductService");
+var _productService = new ProductService_1.ProductService();
+var products;
+var product;
+var p = new Product_1.Product();
+p.id = 2;
+p.name = 'Iphone 7';
+p.price = 2500;
+p.category = 'Telefon';
+_productService.saveProduct(p);
+products = _productService.getProducts();
+product = _productService.getById(1);
+// _productService.deleteProduct(p);
+console.log("All products", products);
+console.log("One product", product);
